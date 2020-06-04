@@ -1,63 +1,4 @@
-/* html {
-    width: 359;
-}
 
-body {
-   
-    background: url('images/cesped.jpeg');
-    border-radius: 5px;
-    border-top: 2px solid white;
-    border-right: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 500px;
-}
-li a {
-    color: black;
-    text-decoration: none;
-}
-
-h2 {
-    text-align: justify;
-}
-
-h1 {
-    text-decoration: underline;
-    font-size: 32px;
-}
-
-
-header {
-    display:flex;
-    justify-content: space-between;
-    padding: 5px;
-    background-color: rgba(70, 179, 19, 0.45);
-    border-bottom: 1px dashed white;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-header h1 {
-    text-shadow: 4px 3px rgb(15, 119, 1);
-    font-size: 36px;
-    text-decoration: none;
-}
-
-.logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.logo img {
-    width: 150px;
-    height: 150px;
-}
-
- */
 
 
 
@@ -167,7 +108,7 @@ nav {
 
 .articleNoticias {
     
-    width: 80%;
+    width: 95%;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -175,11 +116,14 @@ nav {
 .noticia{
     justify-content: center;
     font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .noticia h1{
     text-decoration: 1px underline ;
-    font-size: 16px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
@@ -187,10 +131,11 @@ nav {
     width: 100%;
     text-align: justify;
     background-color:  rgba(172, 255, 47, 0.26);
+    font-size: 15px;
 }
 
 .imgCovid{
-    width: 25%;
+    width: 50%;
 }
 
 .resaltado {
@@ -288,12 +233,27 @@ nav {
     align-items: center;
 }
 
+.divDataEntrenador{
+    width: 90%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+
 .divDataEntrenador div{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.divDataEntrenador div label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form h3{
+    margin-bottom: 0;
+}
 
 .divDataJugadores{
     display: flex;
@@ -386,25 +346,34 @@ nav {
     padding-bottom: 20px;
 }
 
-.containerReglas{
+.articleReglas{
     display: flex;
-    width: 80%;
+    width: 95%;
     justify-content: center;
 }
 
-.divReglas {
+.reglas {
     text-align: center;
-    width: 80%;
+    width: 100%;
+    
 }
 
-.divReglas ul{
+.reglas h1{
+    font-size: 25px;
+}
+
+.reglas h2{
+    font-size: 20px;
+}
+.reglas ul{
     text-align: justify;
     color: white;
 }
 
-.divReglas ul li{
+.reglas ul li{
     list-style: square;
     background-color: rgba(255, 70, 0, 0.59);
+    font-size: 15px;
 }
 
 
@@ -839,7 +808,7 @@ footer nav{
     .sectionFormulario{
         display: flex;
         justify-content: space-around;
-        width: 80%;
+        width: 90%;
         
     }
 
@@ -1105,6 +1074,7 @@ footer nav{
         background: url('images/publiAdidas1.jpg');
         background-size: 100%;
         opacity: 0.85;
+        min-height: 900px;
     }
     /* -------------- fin aside ------------------ */
 
