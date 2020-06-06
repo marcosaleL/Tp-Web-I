@@ -497,6 +497,15 @@ th{
     background-color: rgb(168, 50, 50);
 }
 
+.rowButtons td{
+    border: none;
+    width: 100%;
+}
+
+.rowButtons td input{
+    max-width: none;
+}
+
 
 .inAddName{
     max-width: 70px;
@@ -1052,7 +1061,7 @@ footer nav{
         text-align: center;
     }
     .inAddTeam{
-        max-width: 90px;
+        
         text-align: center;
     }
     .inAddGoal{
@@ -1073,6 +1082,8 @@ footer nav{
         padding-bottom: 5px;
         color: white;
     }
+
+    
 
     .inAddBtn:hover{
         background-color: rgb(168, 50, 50);
