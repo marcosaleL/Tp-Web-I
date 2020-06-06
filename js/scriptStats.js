@@ -1,9 +1,10 @@
-"use sctrict"
 
-document.addEventListener("DOMContentLoaded",iniciarpageStats)
+
+document.addEventListener("DOMContentLoaded",iniciarpageStats);
 
 function iniciarpageStats(){
-
+    
+    "use sctrict"
     let rowsGoles = [
         {
             'nombre': "G. Blasco",
