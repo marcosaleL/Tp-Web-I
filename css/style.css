@@ -385,17 +385,20 @@ form h3{
 
 
 .statsYPos{
-    width: 80%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 670px;
+}
+
+.statsYPos h1{
+    font-size: 25px;
+    text-align: center;
 }
 
 .statsYPos p{
-    margin-left: 30px;
+    font-size: 20px
 }
-
 
 .tablaPos{
     width: 70%;
@@ -406,6 +409,7 @@ form h3{
     vertical-align: bottom;
     border: 1px black solid;
     background-color: rgb(209, 199, 61);
+    font-size: 15px;
 }
 
 .nameTable{
@@ -462,8 +466,12 @@ th{
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    width: 80%;
     flex-wrap: wrap;
+    width: 95%;
+}
+
+.tablaGoles , .tablaAsist{
+    margin-top: 10px;
 }
 
  .divGoles h3, .divAsist h3{
@@ -523,6 +531,11 @@ th{
 
 .required{
     border-color: red;
+}
+
+.tablaPosContainer , .tablaGolesContainer , .tablaAsistContainer{
+    max-width: 100%;
+    overflow-x: scroll;
 }
 
 
@@ -923,15 +936,21 @@ footer nav{
         flex-direction: column;
         align-items: center;
         min-width: 670px;
+        
     }
 
     .statsYPos p{
         margin-left: 30px;
+        width: 85%;
+    }
+
+    .statsYPos h1{
+        font-size: 35px;
     }
 
 
     .tablaPos{
-        width: 70%;
+        width: 100%;
     }
 
     .tablaPos , .tablaGoles , .tablaAsist {
@@ -939,6 +958,7 @@ footer nav{
         vertical-align: bottom;
         border: 1px black solid;
         background-color: rgb(209, 199, 61);
+        font-size: 18px;
     }
 
     .nameTable{
@@ -988,6 +1008,10 @@ footer nav{
     }
     .lastRow{
         background-color: rgb(167, 4, 4);
+    }
+
+    .tablaPosContainer{
+        width: 80%;
     }
 
     .sectionStat{
@@ -1056,6 +1080,11 @@ footer nav{
 
     .required{
         border-color: red;
+    }
+
+    .tablaPosContainer , .tablaGolesContainer , .tablaAsistContainer{
+        overflow-x: unset;
+        max-width: none;
     }
 
 

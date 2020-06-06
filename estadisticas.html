@@ -34,9 +34,10 @@
                 datos
                 que aportan información del torneo
             </p>
+            <h2>Tabla de posiciones</h2>
             <!-----Tabla de posiciones-->
-            <table class="tablaPos">
-                <h2>Tabla de posiciones</h2>
+            <div class="tablaPosContainer">
+                <table class="tablaPos">
                 <thead>
                     <tr class="cabeza">
                         <th>Equipo</th>
@@ -183,7 +184,9 @@
 
                 </tbody>
                 
-            </table>
+                </table>
+            </div>
+            
             <p class="epigrafeTabla">Queda postergado el partido entre Chevrolet FC y CA Ford, por incidentes en la
                 cancha.<br>
                 Los <span class="resClasificado">2 primeros equipos</span> clasifican para la copa nacional de los
@@ -191,28 +194,10 @@
                 El <span class="resEliminado">último equipo</span> queda fuera del torneo de la temporada siguiente.
             </p>
             <section class="sectionStat">
-                <!--------Tabla de goleadores-->
-                <table class="tablaGoles" >
-                    <thead>
 
-                        <tr class="nameTable">
-                            <th></th>
-                            <th>Tabla de goleadores</th>
-                        </tr>
-                        <tr class="cabeza">
-                            <th>Jugador</th>
-                            <th>Equipo</th>
-                            <th># Goles</th>
-                            <th>Borrar</th>
-                        </tr>
-                    </thead>
-                     <tbody id="idTBodyGoles">
-
-                        
-                     </tbody>
-                </table>
-                <!-----Tabla de asistencias-->
-                <table class="tablaAsist">
+<!-----Tabla de asistencias-->
+                <div class="tablaAsistContainer">
+                    <table class="tablaAsist">
                     <thead>
                         <tr class="nameTable">
                             <th></th>
@@ -256,7 +241,32 @@
                             <td>1</td>
                         </tr>
                     </tbody>
-                </table>
+                    </table>
+                </div>
+
+                <!--------Tabla de goleadores-->
+                <div class="tablaGolesContainer">
+                    <table class="tablaGoles" >
+                        <thead>
+                            <tr class="nameTable">
+                                <th></th>
+                                <th>Tabla de goleadores</th>
+                            </tr>
+                            <tr class="cabeza">
+                                <th>Jugador</th>
+                                <th>Equipo</th>
+                                <th># Goles</th>
+                                <th>Borrar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="idTBodyGoles">
+                                
+                        </tbody>
+                    </table>
+                </div>
+                    
+                
+               
             </section>
         </article>
 
