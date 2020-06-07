@@ -36,7 +36,8 @@ h1 {
 /* -------------- header ------------------ */
 header {
     display:flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     padding: 5px;
     background-color: rgba(70, 179, 19, 0.45);
     border-bottom: 1px dashed white;
@@ -46,7 +47,7 @@ header {
 
 header h1 {
     text-shadow: 2px 1px rgb(15, 119, 1);
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -54,6 +55,7 @@ header h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo img {
@@ -63,10 +65,50 @@ header h1 {
 /* -------------- fin header ------------------ */
 
 /* ---------------- nav ------------------ */
+
+#checkMenu{
+    display: none;
+}
+
+#checkMenu:checked + ul{
+    transition: all 300ms;
+    display: flex;
+    
+}
+
 nav {
     display: flex;
     list-style: none;
+    width: 100%;
+    justify-content: flex-end;
 }
+
+.divBtnNav{
+    display: flex;
+    height: 80px;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.lblNav{
+    display: flex;
+    width: 25px;
+    background: url('images/hamMenu.png');
+    background-size: cover;
+    height: 25px;
+    padding: 0 2px;
+}
+
+
+nav ul{
+    display: none;
+    flex-direction: column;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
 
 .boton {
     margin: 0 1px;
@@ -74,10 +116,12 @@ nav {
     padding: 1px;
     border-radius: 2px;
     color: black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: 2px dashed black;
+    border-right: 2px dashed black;
     font-weight: bold;
     list-style: none;
+    width: 120px;
+    text-align: center;
 }
 
 .boton a {
@@ -649,6 +693,7 @@ footer nav{
         border-bottom: 1px dashed white;
         align-items: center;
         flex-wrap: wrap;
+        flex-direction: row;
     }
 
     header h1 {
@@ -673,6 +718,20 @@ footer nav{
     nav {
         display: flex;
         list-style: none;
+        width: auto;
+    }
+
+    .lblNav , .divBtnNav{
+        display: none;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btnNav{
+        display: none;
     }
 
     .boton {
@@ -1083,7 +1142,11 @@ footer nav{
         color: white;
     }
 
-    
+    .moreThanMedia{
+        color: blueviolet;
+        font-weight: bold;
+        text-shadow: 1px 1px black;
+    }
 
     .inAddBtn:hover{
         background-color: rgb(168, 50, 50);
@@ -1125,7 +1188,10 @@ footer nav{
         font-size: 20px;
         align-items: center;
         width: 100%;
-        bottom: 0;
+    }
+
+    footer p{
+        padding-left: 10px;
     }
 
     footer nav{
@@ -1133,6 +1199,7 @@ footer nav{
         display: flex;
         position: sticky;
         list-style: none;
+        padding-right: 10px;
     }
 
     .sociales {

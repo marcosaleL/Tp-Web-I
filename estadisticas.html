@@ -16,11 +16,18 @@
         <div class="logo">
             <img class="imglogo" src="images/logorustico.png">
             <h1>TORNEO de los RÚSTICOS</h1>
+            <div class="divBtnNav">
+                <label class="lblNav" for="checkMenu"></label>
+            </div>
         </div>
         <nav>
-            <li class="boton"><a href="index.html">Inicio</a></li>
-            <li class="boton"><a href="inscripcion.html">Inscripción</a></li>
-            <li class="boton"><a href="reglamento.html">Reglamento</a></li>
+            <input type="checkbox" name="" id="checkMenu">
+            <ul>
+                <li class="boton"><a href="index.html">Inicio</a></li>
+                <li class="boton"><a href="inscripcion.html">Inscripción</a></li>
+                <li class="boton"><a href="reglamento.html">Reglamento</a></li>    
+            </ul>
+            
         </nav>
     </header>
 
@@ -195,8 +202,7 @@
                 El <span class="resEliminado">último equipo</span> queda fuera del torneo de la temporada siguiente.
             </p>
             <section class="sectionStat">
-
-<!-----Tabla de asistencias-->
+                <!-----Tabla de asistencias-->
                 <div class="tablaAsistContainer">
                     <table class="tablaAsist">
                     <thead>
@@ -257,26 +263,17 @@
                                 <th>Jugador</th>
                                 <th>Equipo</th>
                                 <th># Goles</th>
-                                <th>Del/Add</th>
                             </tr>
                         </thead>
                         <tbody id="idTBodyGoles">
                         </tbody>
                     </table>
-                </div>
-                    
-                
-               
+                </div>           
             </section>
-        </article>
-
-        
+        </article>  
         <aside>
         </aside>
-
     </div>
-
-
 
     <footer>
         <p>Contacto Wsp: +54 249-4112233</p>

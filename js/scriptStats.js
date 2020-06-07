@@ -27,7 +27,7 @@ function iniciarpageStats(){
     function mediaGoles(){
         let suma = 0;
         for (let index = 0; index < rowsGoles.length; index++) {
-            suma = suma + rowsGoles[index].goles;
+            suma = suma + parseInt(rowsGoles[index].goles);
         }
         return (suma/rowsGoles.length);
     }
@@ -37,20 +37,34 @@ function iniciarpageStats(){
         let contentTabla = "";
         let lastRow = '<tr class = "filaAdd"> <td> <input type="text" name="" class = "inAddName" id="IdInputNombre" placeholder="Nombre" required> </td>' + 
         '<td> <input type="text" name="" id="IdInputEquipo" class = "inAddTeam" placeholder="Equipo" required> </td>' +
-        '<td> <input type="text" name="" id="IdInputGoles" class = "inAddGoal" placeholder="Goles" required> </td>' +
-        '<td> <input type="button" value="Add" id="idBtnAdd" class = "inAddBtn" > </td> </tr>'+
-        '<tr class = "rowButtons"> <td> <input type="button" value="AddX3" id="idBtnAdd3" class = "inAddBtn" > </td> ' +
-        '<td> <input type="button" value="Del All" id="idDelAll" class = "inAddBtn" > </td> </tr>';
+        '<td> <input type="number" name="" id="IdInputGoles" class = "inAddGoal" placeholder="Goles" required> </td>' +
+        '</tr>'+
+        '<tr class = "rowButtons"> <td> <input type="button" value="Add" id="idBtnAdd" class = "inAddBtn" > </td> ' +
+        '<td> <input type="button" value="Del All" id="idDelAll" class = "inAddBtn" > </td> ' + 
+        ' <td> <input type="button" value="AddX3" id="idBtnAdd3" class = "inAddBtn" > </td> </tr>';
+        
+        let clase ="";
+        
+
 
         for (let index = 0; index < rowsGoles.length; index++) {
             if((index%2) == 0){
-                contentTabla = contentTabla + "<tr> <td>" + rowsGoles[index].nombre + "</td>" ;
+                //Aplico estilo diferente si los goles superan la media
+                if (rowsGoles[index].goles >= mediaGoles()){
+                    contentTabla = contentTabla + '<tr class= "moreThanMedia"> <td>' + rowsGoles[index].nombre + "</td>" ;
+                }else{
+                    contentTabla = contentTabla + '<tr> <td>' + rowsGoles[index].nombre + "</td>" ;
+                }
+                
             }else{
-                contentTabla = contentTabla + '<tr class= "distinctRow" > <td>' + rowsGoles[index].nombre +
-                "</td>";
+                if (rowsGoles[index].goles >= mediaGoles()){
+                    contentTabla = contentTabla + '<tr class= "moreThanMedia distinctRow"> <td>' + rowsGoles[index].nombre + "</td>" ;
+                }else{
+                    contentTabla = contentTabla + '<tr class= "distinctRow"> <td>' + rowsGoles[index].nombre + "</td>" ;
+                }
             }
-            contentTabla += "<td>" + rowsGoles[index].equipo + "</td>" + "<td>" + rowsGoles[index].goles +
-            "</td>" + '<td><button class = '+ '"btnDel"> Del </button> </td></tr>'
+            
+            contentTabla += "<td>" + rowsGoles[index].equipo + "</td>" + "<td>" + rowsGoles[index].goles;
         }
         document.querySelector("#idTBodyGoles").innerHTML = contentTabla + lastRow;
 
@@ -77,7 +91,6 @@ function iniciarpageStats(){
             rowsGoles.sort(function (a,b){return (b.goles - a.goles) });
             mostrarTabla();
         }else{
-            console.log("requerido");
             document.querySelector("#IdInputNombre").classList.add("required");
             document.querySelector("#IdInputEquipo").classList.add("required");
             document.querySelector("#IdInputGoles").classList.add("required");
@@ -104,6 +117,7 @@ function iniciarpageStats(){
                 'goles': 3
             };
         rowsGoles.push(toAdd);
+        rowsGoles.sort(function (a,b){return (b.goles - a.goles) });
         mostrarTabla();
     }
 
@@ -115,7 +129,6 @@ function iniciarpageStats(){
 
     function deleteRow(indice){
         rowsGoles.splice(indice,1);
-        console.log(rowsGoles);
         mostrarTabla();
     }
 
