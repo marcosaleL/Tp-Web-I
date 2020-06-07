@@ -382,7 +382,7 @@ form h3{
 
 
 
-/*---------------------ESTADISTICAS-----------------------*/
+/*---------------------REGLAMENTO-----------------------*/
 
 .statsYPos{
     padding-bottom: 20px;
@@ -399,6 +399,9 @@ form h3{
     width: 100%;
     
 }
+
+
+
 
 .reglas h1{
     font-size: 25px;
@@ -548,6 +551,12 @@ th{
 
 .rowButtons td input{
     max-width: none;
+}
+
+.moreThanMedia{
+    color: blueviolet;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
 }
 
 
@@ -1142,11 +1151,6 @@ footer nav{
         color: white;
     }
 
-    .moreThanMedia{
-        color: blueviolet;
-        font-weight: bold;
-        text-shadow: 1px 1px black;
-    }
 
     .inAddBtn:hover{
         background-color: rgb(168, 50, 50);
