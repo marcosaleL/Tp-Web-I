@@ -38,10 +38,9 @@ function iniciarpageStats(){
         let lastRow = '<tr class = "filaAdd"> <td> <input type="text" name="" class = "inAddName" id="IdInputNombre" placeholder="Nombre" required> </td>' + 
         '<td> <input type="text" name="" id="IdInputEquipo" class = "inAddTeam" placeholder="Equipo" required> </td>' +
         '<td> <input type="number" name="" id="IdInputGoles" class = "inAddGoal" placeholder="Goles" required> </td>' +
-        '</tr>'+
-        '<tr class = "rowButtons"> <td> <input type="button" value="Add" id="idBtnAdd" class = "inAddBtn" > </td> ' +
-        '<td> <input type="button" value="Del All" id="idDelAll" class = "inAddBtn" > </td> ' + 
-        ' <td> <input type="button" value="AddX3" id="idBtnAdd3" class = "inAddBtn" > </td> </tr>';
+        '<td> <input type="button" value="Add" id="idBtnAdd" class = "inAddBtn" > </td> </tr>'+
+        '<tr class = "rowButtons"> <td> <input type="button" value="AddX3" id="idBtnAdd3" class = "inAddBtn" > </td> ' +
+        '<td> <input type="button" value="Del All" id="idDelAll" class = "inAddBtn" > </td> </tr>';
         
         let clase ="";
         
@@ -55,7 +54,6 @@ function iniciarpageStats(){
                 }else{
                     contentTabla = contentTabla + '<tr> <td>' + rowsGoles[index].nombre + "</td>" ;
                 }
-                
             }else{
                 if (rowsGoles[index].goles >= mediaGoles()){
                     contentTabla = contentTabla + '<tr class= "moreThanMedia distinctRow"> <td>' + rowsGoles[index].nombre + "</td>" ;
@@ -63,8 +61,8 @@ function iniciarpageStats(){
                     contentTabla = contentTabla + '<tr class= "distinctRow"> <td>' + rowsGoles[index].nombre + "</td>" ;
                 }
             }
-            
-            contentTabla += "<td>" + rowsGoles[index].equipo + "</td>" + "<td>" + rowsGoles[index].goles;
+            contentTabla += "<td>" + rowsGoles[index].equipo + "</td>" + "<td>" + rowsGoles[index].goles +
+            "</td>" + '<td><button class = '+ '"btnDel"> Del </button> </td></tr>'
         }
         document.querySelector("#idTBodyGoles").innerHTML = contentTabla + lastRow;
 
