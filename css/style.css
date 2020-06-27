@@ -496,7 +496,10 @@ th, td {
 
 th{
     border-bottom: 3px black solid;
+    width: 10px;
 }
+
+
 
 .cabeza {
     background-color: darkorange;
@@ -521,26 +524,26 @@ th{
     margin-top: 10px;
 }
 
- .divGoles h3, .divAsist h3{
+.divGoles h3, .divAsist h3{
     text-align: center;
     text-shadow: -1px -1px black;
     color: green;
 }
 
-.btnDel{
+.btnTable{
     background-color: rgb(99, 25, 25);
     border-radius: 5px;
     border: 0;
     border-bottom: 2px black;
     border-right: 2px black;
-    padding-right: 23px;
-    padding-left: 23px;
+    padding-right: 20px;
+    padding-left: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
 }
 
-.btnDel:hover{
+.btnTable:hover{
     background-color: rgb(168, 50, 50);
 }
 
@@ -559,6 +562,43 @@ th{
     text-shadow: 1px 1px black;
 }
 
+.inAddGoal{
+    -moz-appearance:textfield;
+}
+
+.filaAdd td{
+    border-top: 3px solid black;
+    background-color: darkorange;
+}
+.inAddGoal::-webkit-inner-spin-button{ 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.inAddGoal::-webkit-outer-spin-button{ 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.inputDato{
+    background-color: rgba(1,1,1,0);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: inherit;
+    color: inherit;
+    text-shadow: inherit;
+    font-weight: inherit;
+}
+
+.editing{
+    background-color: bisque;
+    color: black;
+    text-shadow: none;
+    font-weight: none;
+}
+
 
 .inAddName{
     max-width: 70px;
@@ -572,20 +612,7 @@ th{
     max-width: 65px;
     text-align: center;
 }
-.inAddBtn{
-    max-width: 70px;
-    text-align: center;
-    background-color: rgb(99, 25, 25);
-    border-radius: 5px;
-    border: 0;
-    border-bottom: 2px black;
-    border-right: 2px black;
-    padding-right: 23px;
-    padding-left: 23px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-}
+
 
 .inAddBtn:hover{
     background-color: rgb(168, 50, 50);

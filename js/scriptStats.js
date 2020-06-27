@@ -6,39 +6,7 @@ function iniciarpageStats(){
     "use sctrict"
 
     let urlBase = "https://web-unicen.herokuapp.com/api/groups/099/goleadores";
-
-   /*
-
-    fetch(urlBase,{
-        "method": "GET",
-        "headers": {"Content-Type": "application/json"}
-    })
-    .then(function(respuesta){ 
-        return respuesta.json()
-    })
-    .then(function(json) {  
-        mostrarTabla(json.goleadores);
-    })
-
-    */
     
-    //estructura basica para agregar un elem en el servicio
-
-    /*
-    let ppa = {
-        "thing": {
-            'nombre': "papa",
-            'equipo': "FreeRonaldinhodsads",
-            'goles': 7
-        }
-    }
-
-    agregarAServicio(ppa);
-    */
-
-   
-
-
 
     //Funcion que calcula la media de goles, de la tabla de goleadores
     function mediaGoles(){
@@ -49,11 +17,11 @@ function iniciarpageStats(){
         return (suma/rowsGoles.length);
     }
 
-   
-    
     function mostrarTabla(){
 
         
+        '<input type="text" class="input' + index + ' value=" ' + rowsGoles[index].thing.equipo +  ' " readonly>'
+
         fetch(urlBase,{
             "method": "GET",
             "headers": {"Content-Type": "application/json"}
@@ -63,7 +31,6 @@ function iniciarpageStats(){
         })
         .then(function(json) {
             rowsGoles = json.goleadores;
-            
             let contentTabla = "";
             let lastRow = '<tr class = "filaAdd"> <td> <input type="text" name="" class = "inAddName" id="IdInputNombre" placeholder="Nombre" required> </td>' + 
             '<td> <input type="text" name="" id="IdInputEquipo" class = "inAddTeam" placeholder="Equipo" required> </td>' +
@@ -73,8 +40,6 @@ function iniciarpageStats(){
             '<td> <input type="button" value="Del All" id="idDelAll" class = "inAddBtn" > </td> </tr>';
             
             let clase ="";
-
-
             for (let index = 0; index < rowsGoles.length; index++) {
                 if((index%2) == 0){
                     //Aplico estilo diferente si los goles superan la media
@@ -126,13 +91,14 @@ function iniciarpageStats(){
                 "body": JSON.stringify(toAdd),
                 "headers": {"Content-Type": "application/json"}
             })
+
             .then(function(r){
                 return r.json()
              })
              .then(function(json) {
                 //Funcion clausurada
                 //rowsGoles.sort(function (a,b){return (b.goles - a.goles) });
-               
+                //console.log(json);
              })
              .catch(function(e){
                 console.log(e)
@@ -220,7 +186,7 @@ function iniciarpageStats(){
     }
     
     
-    mostrarTabla();
+    //mostrarTabla();
 
 }
 
